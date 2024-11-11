@@ -1,0 +1,26 @@
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
+print("frostbite damage, please if you have any part of damaging the player from the script that can make frostbite take damage until open a door call me discord: francisco5764623")
+
+local s = game:GetObjects("rbxassetid://73977832789527")[1]
+s.Parent = workspace
+local ambush = s:WaitForChild("Part")
+ambush.Ambience:Stop()
+ambush.AmbienceFar:Stop()
+ambush["Static Effect"]:Play()
+wait(5)
+game.TweenService:Create(ambush["Static Effect"], TweenInfo.new(2), {PlaybackSpeed = 0}):Play()
+wait(2)
+ambush.Attachment.Heylois.Enabled = true
+ambush.Attachment.face.Enabled = true
+ambush["Static Effect"]:Stop()
+ambush.AmbienceFar:Play()
+ambush.Ambience:Play()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+ambush.Attachment.Heylois.Enabled = false
+ambush.Attachment.face.Enabled = false
+ambush["Static Effect"]:Stop()
+ambush.AmbienceFar:Stop()
+ambush.Ambience:Stop()
+wait(3.2)
+s:Destroy()
