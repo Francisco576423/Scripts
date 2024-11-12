@@ -5,6 +5,7 @@ print("frostbite damage, please if you have any part of damaging the player from
 local s = game:GetObjects("rbxassetid://73977832789527")[1]
 s.Parent = workspace
 local ambush = s:WaitForChild("Part")
+ambush.CFrame = workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value]:WaitForChild("Door"):WaitForChild("Door").CFrame * CFrame.new(4, 2, 7)
 ambush.Ambience:Stop()
 ambush.AmbienceFar:Stop()
 ambush["Static Effect"]:Play()
