@@ -1,3 +1,16 @@
+local redtweeninfo = TweenInfo.new(3)
+local redinfo = {Color = Color3.new(1, 0, 0.133333)}
+
+for i,v in pairs(game.Workspace.CurrentRooms:GetDescendants()) do
+	if v:IsA("Light") then
+		game.TweenService:Create(v,redtweeninfo,redinfo):Play()
+		if v.Parent.Name == "LightFixture" then
+			game.TweenService:Create(v.Parent,redtweeninfo,redinfo):Play()
+		end
+	end
+end
+wait(5.4)
+
 ---====== Define spawner ======---
 
 local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V1/Source.lua"))()
@@ -8,7 +21,7 @@ local entity = Spawner.createEntity({
     CustomName = "Ripper",
     Model = "rbxassetid:////18866107908", -- Your entity's model url here ("rbxassetid://1234567890" or GitHub raw url)
     Speed = 100,
-    MoveDelay = 6,
+    MoveDelay = 0,
     HeightOffset = 0,
     CanKill = true,
     KillRange = 70,
