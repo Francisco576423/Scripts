@@ -5,7 +5,7 @@ local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Regul
 ---====== Create entity ======---
 
 local entity = Spawner.createEntity({
-    CustomName = "Template Entity",
+    CustomName = "Deer God",
     Model = "https://github.com/Francisco576423/My-Hardcore-Remake-Models-more-cooming-soon-/blob/main/deer%20god.rbxm?raw=true", -- Your entity's model url here ("rbxassetid://1234567890" or GitHub raw url)
     Speed = 20,
     MoveDelay = 2,
